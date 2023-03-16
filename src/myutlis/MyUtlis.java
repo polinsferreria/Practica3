@@ -28,6 +28,7 @@ public class MyUtlis {
         return resultat;
     }
 
+    
     /**
      *
      * @param day int dia del naixement
@@ -55,6 +56,7 @@ public class MyUtlis {
         if (resultat > 130) { // edad demasiado grande
             return -1;
         }
+        
         return resultat;//la seva edad
     }
     

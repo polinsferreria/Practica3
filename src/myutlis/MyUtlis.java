@@ -20,8 +20,6 @@ public class MyUtlis {
      */
     public static String inverteix(String cadena) {
         String resultat = "";
-        System.out.println(resultat.length());
-        System.out.println(cadena.length());
         for (int i = cadena.length() - 1; i >= 0; i--) {
             resultat += cadena.charAt(i);
         }
@@ -57,26 +55,30 @@ public class MyUtlis {
         }
         return resultat;//la seva edad
     }
-    
-    
+
     /**
      *
      * @param numero número del que es calcula el factorial
      * @return retorna el factorial d'un número. Si el nombre es negatiu retorna
      * -1.
      */
-    public static double factorial(double numero) {
-
+    public static int factorial(int numero) {
+        int resultat = 0;
         if (numero == 0) {
-            return 1;
+            resultat = 1;
         } else {
-            double resultat = numero * factorial(numero - 1);
-            if (numero < 0) {
-                numero = -1;
+            if (numero > 2) {
+                for (int i = numero; i > 1; i--) {
+                    resultat *= i - 1;
+                }
             }
-            return resultat;
+
+            if (numero < 0) {
+                resultat = -1;
+            }
+            
         }
+        return resultat;
     }
 
-    
 }

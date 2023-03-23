@@ -69,7 +69,7 @@ public class MyUtlis {
         } else {
             if (numero > 2) {
                 for (int i = numero; i > 1; i--) {
-                    resultat *= i - 1;
+                    resultat= numero *= i - 1;
                 }
             }
 
